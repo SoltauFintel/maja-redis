@@ -75,6 +75,10 @@ public class CacheTK<KEY_TYPE, VALUE_TYPE> {
 		}
 	}
 	
+	public void clearDatabase() {
+		redis.flushDB();
+	}
+	
 	public Long getDatabaseSize() {
 		return redis.dbSize();
 	}
