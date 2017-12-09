@@ -4,7 +4,7 @@ public interface Translator<T> {
 
 	/**
 	 * @param key
-	 * @return String representation for key
+	 * @return byte array representation for key
 	 */
-	String translate(T key);
+	byte[] translate(T key);
 }

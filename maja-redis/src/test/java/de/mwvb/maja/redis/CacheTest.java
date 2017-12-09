@@ -26,7 +26,7 @@ public class CacheTest {
 	
 	@Test
 	public void tk_put_get_remove() {
-		CacheTK<LocalDate> cache = new CacheTK<>(host, port, key -> key.toString());
+		CacheTK<LocalDate, String> cache = new CacheTK<>(host, port, key -> key.toString().getBytes());
 		LocalDate key = LocalDate.now();
 		cache.put(key, "abce");
 		

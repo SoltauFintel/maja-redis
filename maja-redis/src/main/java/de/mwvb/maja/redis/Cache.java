@@ -1,8 +1,11 @@
 package de.mwvb.maja.redis;
 
-public class Cache extends CacheTK<String> {
+/**
+ * Cache with String keys and String values. Expiration: 10 days.
+ */
+public class Cache extends CacheTK<String, String> {
 	
 	public Cache(String host, int port) {
-		super(host, port, key -> key);
+		super(host, port, key -> key.getBytes());
 	}
 }
